@@ -22,7 +22,7 @@ static int is_int(char* str_int)
 static int is_correct_op(char* str_op)
 {
     char* str_ops = "+-*%";
-    return strchr(str_ops, atoi(str_op)) != NULL;
+    return strlen(str_op) == 1 && strstr(str_ops, str_op) != NULL;
 }
 
 static int check_order(int argc, char** argv)

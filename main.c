@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "calc.h"
 #include "checks.h"
+#include "decoder.h"
 
 int main(int argc, char** argv)
 {   
@@ -16,6 +18,12 @@ int main(int argc, char** argv)
     int* res_arr = calculate_res(operations, n_symbols);
     
     print_res_arr(res_arr, n_ops);
+
+    int k = atoi(argv[argc - 1]);
+    char* res_str = decode_res_str(res_arr, n_ops, k);
+
+    printf("Результирующвя строка: %s\n", res_str);
+
     free_res_arr();
     return 0;
 
