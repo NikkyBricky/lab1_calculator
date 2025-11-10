@@ -4,7 +4,7 @@
 
 static int* res_arr = NULL;
 
-void init_res_arr(int cap)
+void init_res_arr(unsigned cap)
 {
     int* temp = (int*)malloc(cap * sizeof(int));
     if (!temp)
@@ -21,7 +21,7 @@ void free_res_arr()
     res_arr = NULL;
 }
 
-int* calculate_res(char** operations, int n_symbols)
+int* calculate_res(char** operations, unsigned n_symbols)
 {
     int res;
     size_t len = 0; 
@@ -49,7 +49,7 @@ int* calculate_res(char** operations, int n_symbols)
     return res_arr;
 }
 
-void print_res_arr(int* res_arr, int n_ops)
+void print_res_arr(int* res_arr, unsigned n_ops)
 {
     for (size_t i = 0; i < n_ops; ++i)
 	    

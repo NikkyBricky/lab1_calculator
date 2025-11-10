@@ -27,7 +27,7 @@ static int is_correct_op(char* str_op)
 
 static int check_order(int argc, char** argv)
 {
-    for (size_t i = 1; i < argc - 4; i += 3)
+    for (int i = 1; i < argc - 4; i += 3)
     {
         if (!(is_int(argv[i]) && is_correct_op(argv[i + 1]) && is_int(argv[i + 2])))
 	{

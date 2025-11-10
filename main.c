@@ -10,8 +10,8 @@ int main(int argc, char** argv)
 
     char** operations = argv + 1;
 
-    int n_symbols = argc - 3;
-    int n_ops = argc/3 - 1;
+    unsigned n_symbols = argc - 3;
+    unsigned n_ops = argc/3 - 1;
     
     init_res_arr(n_ops);
 
@@ -25,6 +25,8 @@ int main(int argc, char** argv)
     printf("Результирующвя строка: %s\n", res_str);
 
     free_res_arr();
+    free(res_str);
+
     return 0;
 
 }
