@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include "calc.h"
+#include "checks.h"
 
 int main(int argc, char** argv)
-{      
+{   
+    check_input(argc, argv);
+
     char** operations = argv + 1;
 
     int n_symbols = argc - 3;
