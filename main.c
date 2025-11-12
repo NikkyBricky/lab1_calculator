@@ -4,6 +4,7 @@
 #include "checks.h"
 #include "decoder.h"
 
+
 int main(int argc, char** argv)
 {   
     check_input(argc, argv);
@@ -22,11 +23,10 @@ int main(int argc, char** argv)
     int k = atoi(argv[argc - 1]);
     char* res_str = decode_res_str(res_arr, n_ops, k);
 
-    printf("Результирующвя строка: %s\n", res_str);
+    printf("Результирующая строка: %s\n", res_str);
 
     free_res_arr();
     free(res_str);
 
     return 0;
-
 }

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 char* decode_res_str(int* res_arr, unsigned num_el, int k)
 {
     char* temp_res_str = (char*)malloc((num_el + 1) * sizeof(char));
@@ -16,6 +17,7 @@ char* decode_res_str(int* res_arr, unsigned num_el, int k)
     {
 	if (i == num_el)
 	    res_str[i] = '\0';
+
 	else
             res_str[i] = res_arr[i] - k;
     }

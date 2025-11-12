@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 static int check_num_el(int argc)
 {
     if (argc < 6 || argc % 3 != 0)
@@ -12,6 +13,7 @@ static int check_num_el(int argc)
     return 0;
 }
 
+
 static int is_int(char* str_int)
 {
     char* endptr = NULL;
@@ -19,11 +21,13 @@ static int is_int(char* str_int)
     return *endptr == '\0';
 }
 
+
 static int is_correct_op(char* str_op)
 {
     char* str_ops = "+-*%";
     return strlen(str_op) == 1 && strstr(str_ops, str_op) != NULL;
 }
+
 
 static int check_order(int argc, char** argv)
 {
@@ -37,6 +41,7 @@ static int check_order(int argc, char** argv)
     }
     return 0;
 }
+
 
 static int check_flag_val(int argc, char** argv)
 {
@@ -53,6 +58,7 @@ static int check_flag_val(int argc, char** argv)
     }
     return 0;
 }
+
 
 void check_input(int argc, char** argv)
 {
