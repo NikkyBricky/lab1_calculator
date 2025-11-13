@@ -3,7 +3,7 @@
 #include <string.h>
 #include "calc.h"
 
-static int* res_arr = NULL;
+static int* RES_ARR = NULL;
 
 
 void init_res_arr(unsigned cap)
@@ -14,14 +14,14 @@ void init_res_arr(unsigned cap)
         printf("Недостаточно памяти\n");
 	exit(1);
     }
-    res_arr = temp;
+    RES_ARR = temp;
 }
 
 
 void free_res_arr()
 {
-    free(res_arr);
-    res_arr = NULL;
+    free(RES_ARR);
+    RES_ARR = NULL;
 }
 
 
@@ -49,11 +49,11 @@ int* calculate_res(char** operations, unsigned n_symbols)
 		break;
 	}
 
-        res_arr[len] = res;
+        RES_ARR[len] = res;
         ++len;    
     }
 
-    return res_arr;
+    return RES_ARR;
 }
 
 

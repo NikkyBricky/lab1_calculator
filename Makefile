@@ -1,6 +1,7 @@
-.PHONY: run clean
+.PHONY: run clean all
 CFLAGS = -Wall -Wextra
 ARGS = 41 \+ 33 111 \- 8 22 \* 5 221 \% 111 100 \+ 13 -k 2
+all: main
 main.o: main.c
 	gcc -c main.c $(CFLAGS)
 checks.o: checks.c
