@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "decoder.h"
 
 char* decode_res_str(int* res_arr, unsigned num_el, int k)
 {

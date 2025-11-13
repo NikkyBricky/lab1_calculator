@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#include "checks.h"
 
 static int check_num_el(int argc)
 {
